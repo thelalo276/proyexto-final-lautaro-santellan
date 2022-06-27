@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-danger">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="images/logo.jpg" alt="" width="200">
@@ -9,11 +9,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto ">
-                <li class="nav-item"><a class="nav-link" href="#">home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">summer pack</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">about</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">register</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">sing in</a></li>
+                <li class="nav-item"><a class="nav-link" data-scroll href="#mainslider">inicio</a></li>
+                <li class="nav-item"><a class="nav-link" data-scroll href="#novedades">novedades</a></li>
+                <li class="nav-item"><a class="nav-link" data-scroll href="#amiibos">amiibo</a></li>
+                <li class="nav-item"><a class="nav-link" data-scroll href="#play">play</a></li>
+                <li class="nav-item"><a class="nav-link" data-scroll href="#contacto">contacto</a></li>
             </ul>
         </div>
     </div>
@@ -51,47 +51,38 @@
     <div class="content bg-warning"></div>
 </div>
 <!-- games -->
-<div id="novedades">
-
-    <div class="row pt-5">
-        <h3 class="text-center pb-5 pt-5 h1">novedades</h3>
-    </div>
-
-    {{#each novedades}}
-    <div class="row">
-        <div class="col-sm card-border mb-5">
-            <div class="card">
-                <div class="lista-novedades">
-                    <img src="images/card01.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">{{titulo}}</h3>
-                        <h5 class="card-title">{{subtitulo}}</h5>
-                        <p class="card-text">{{cuerpo}}</p>
-
-                        {{/each}}
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row py-5">
-            <div class="col">
-                <h3 class="text-center" style="color:var(--bs-blue)">more games on nintendo.com</h3>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-2"><a href="#">nintendo switch</a></div>
-            <div class="col-2"><a href="#">nintendo 3ds</a></div>
-            <div class="col-1"><a href="#">wii U</a></div>
-            <div class="col-1"><a href="#">movile</a></div>
-            <div class="col-1"><a href="#">retro</a></div>
-        </div>
-
-    </div>
+<div id="novedades" class="row py-4">
+    <div class="col-md-5"></div>
+    <h3 class="text-center pb-5 pt-5 h1">novedades</h3>
 
 </div>
+
+<ul class="lista-novedades">
+    {{#each novedades}}
+    <li>
+        <a href=""><img src="{{imagen}}" width="120"></a>
+        <a href="{{subtitulo}}" target="_blank">{{titulo}}</a>
+    </li>
+    {{/each}}
+</ul>
+
+<div class="row py-5">
+    <div class="col">
+        <h3 class="text-center" style="color:var(--bs-blue)">more games on nintendo.com</h3>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-2"><a href="#">nintendo switch</a></div>
+    <div class="col-2"><a href="#">nintendo 3ds</a></div>
+    <div class="col-1"><a href="#">wii U</a></div>
+    <div class="col-1"><a href="#">movile</a></div>
+    <div class="col-1"><a href="#">retro</a></div>
+</div>
+
+</div>
+
+
 <!-- separador de los amiibos -->
 <div id="separator-amiibos">
     <div class="content bg-success"></div>
@@ -121,23 +112,147 @@
                 <div class="text-center"><span class="amiibo-name">timmy and tommy</span></div>
             </div>
         </div>
+        <div id="separator-amiibos-footer"></div>
+    </div>
+</div>
+
+{{!-- play nintendo --}}
+
+<div id="play">
+    <div class="container-sm p-5">
+        <div class="row">
+            <h3 class="text-center h1">Isabelle and friends on play nintendo</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-3 d-none d-md-block">
+                <img src="/images/isabelle.png" alt="" class="w-100">
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col p-1">
+                        {{!-- card --}}
+                        <div class="card bg-warning text-white" style="max-width: 540px;">
+
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="/images/ph-01.jpg" class="w-100" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                {{!-- card --}}
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col p-1">
+                        {{!-- card --}}
+                        <div class="card bg-danger text-white" style="max-width: 540px;">
+
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="/images/ph-02.jpg" class="w-100" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                {{!-- card --}}
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col p-1">
+                        {{!-- card --}}
+                        <div class="card bg-success text-white" style="max-width: 540px;">
+
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="/images/ph-03.jpg" class="w-100" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                {{!-- card --}}
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col p-1">
+                        {{!-- card --}}
+                        <div class="card bg-primary text-white" style="max-width: 540px;">
+
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="/images/ph-04.jpg" class="w-100" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                {{!-- card --}}
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
 
 
+{{!-- footer --}}
 
 
 
 {{!-- inicio de contactanos --}}
-<div class="col-md-4 mt-4 mt-sm-0">
+<div id="contacto" class="container-sm p-5">
     <h2>contactanos</h2>
     <form action="/" method="post">
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group">
                 <label for="nombre">nombre completo</label>
                 <input type="text" class="form control" id="nombre" placeholder="..." name="nombre">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group">
                 <label for="email">email</label>
                 <input type="email" class="form control" id="email" placeholder="ejemplo@gmail.com" name="email">
             </div>
@@ -157,6 +272,22 @@
     {{/if}}
 </div>
 
-<footer>
-    <p class="text-center">Diseñado por: Lautaro Santellan</p>
-</footer>
+    <div id="footer" class="p-5">
+        <div class="container w-50 pt-5">
+            <div class="row justify-content-md-center">
+                <div class="col text-center">
+                    <a href="#">
+                        <button class="btn btn-lg rounded-pill btn-warning w-10 p-3 shadow-sm font-weight-bold">inicio</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center py-5">
+                <div class="col text-center font-weight-light">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci magnam accusamus, eum
+                        voluptate aliquam quasi fuga eligendi nam eveniet repudiandae? Provident quibusdam repudiandae,
+                        alias placeat omnis nesciunt non quaerat.</p>
+                </div>
+            </div>
+        </div>
+    </div>

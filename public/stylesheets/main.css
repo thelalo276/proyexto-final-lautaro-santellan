@@ -1,4 +1,4 @@
-h1,h2,h3,h4,h5, button, .amiibo-name{
+h1,h2,h3,h4,h5, button, .amiibo-name, p{
     font-family: 'Bitter', serif;
 
 }
@@ -48,13 +48,39 @@ h1,h2,h3,h4,h5, button, .amiibo-name{
     margin-top: -30px;
 }
 
-#novedades{
-    background: rgb(255,255,255);
-    background: url(../images/bg-02.png),  linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(99,196,255,1) 57%);
-    background-repeat: repeat-x;
-    background-size: 75%;
-    margin-top: -20px;
+.lista-novedades {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+
+.lista-novedades li {
+    margin: 4px o;
+}
+
+.lista-novedades li a {
+    background-color: #fff;
+    font-family: 'Alfa Slab One ' , cursive;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    transition: all .2s ease-in-out;
+   
+}
+
+.lista-novedades li a img {
+
+    filter: grayscale();
+    transition: all .2s ease-in-out;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+.lista-novedades li a:hover img{
+    filter: none;
+    margin-right: 1.4rem;
+    opacity: 1;
+}
+
 
 .card-border{
     border: solid 10px white;
