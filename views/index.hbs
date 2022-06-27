@@ -1,0 +1,162 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.jpg" alt="" width="200">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="toogle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">summer pack</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">about</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">register</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">sing in</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- carrousel -->
+<div class="carousel slide" id="mainslider" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/slide01.jpg" alt="" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+            <img src="images/slide02.jpg" alt="" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+            <img src="images/slide03.jpg" alt="" class="d-block w-100">
+        </div>
+    </div>
+</div>
+<!-- ribbon -->
+<div id="ribbon" class="container-fluid">
+    <div id="birthday" class="container w-50 pl-5">
+        <div class="row align-items-center">
+            <div class="col-sm p-3">
+                <img src="images/image01.png" class="w-75 mx-auto d-block" alt="">
+            </div>
+            <div class="col-sm p-3 text-light text-center">
+                <P class="text-werning h3">today is</P>
+                <h4 class="h2 text-shadow">Samson's birthday</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- separador de el ribbon -->
+<div id="separator-ribbon">
+    <div class="content bg-warning"></div>
+</div>
+<!-- games -->
+<div id="novedades">
+
+    <div class="row pt-5">
+        <h3 class="text-center pb-5 pt-5 h1">novedades</h3>
+    </div>
+
+    {{#each novedades}}
+    <div class="row">
+        <div class="col-sm card-border mb-5">
+            <div class="card">
+                <div class="lista-novedades">
+                    <img src="images/card01.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">{{titulo}}</h3>
+                        <h5 class="card-title">{{subtitulo}}</h5>
+                        <p class="card-text">{{cuerpo}}</p>
+
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row py-5">
+            <div class="col">
+                <h3 class="text-center" style="color:var(--bs-blue)">more games on nintendo.com</h3>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-2"><a href="#">nintendo switch</a></div>
+            <div class="col-2"><a href="#">nintendo 3ds</a></div>
+            <div class="col-1"><a href="#">wii U</a></div>
+            <div class="col-1"><a href="#">movile</a></div>
+            <div class="col-1"><a href="#">retro</a></div>
+        </div>
+
+    </div>
+
+</div>
+<!-- separador de los amiibos -->
+<div id="separator-amiibos">
+    <div class="content bg-success"></div>
+</div>
+<!-- amiibos -->
+
+<div id="amiibos" class="px-5 pb-5bg-success">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center text-white text-shadow">featured amiibo figures</h2>
+        </div>
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
+            <div class="col-sm">
+                <img src="images/figure01.png" alt="" class="w-100 amiibo">
+                <div class="text-center"><span class="amiibo-name">Isabelle</span></div>
+            </div>
+            <div class="col-sm">
+                <img src="images/figure02.png" alt="" class="w-100 amiibo">
+                <div class="text-center"><span class="amiibo-name">kapp'n</span></div>
+            </div>
+            <div class="col-sm">
+                <img src="images/figure03.png" alt="" class="w-100 amiibo">
+                <div class="text-center"><span class="amiibo-name">rover</span></div>
+            </div>
+            <div class="col-sm">
+                <img src="images/figure04.png" alt="" class="w-100 amiibo">
+                <div class="text-center"><span class="amiibo-name">timmy and tommy</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{{!-- inicio de contactanos --}}
+<div class="col-md-4 mt-4 mt-sm-0">
+    <h2>contactanos</h2>
+    <form action="/" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nombre">nombre completo</label>
+                <input type="text" class="form control" id="nombre" placeholder="..." name="nombre">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">email</label>
+                <input type="email" class="form control" id="email" placeholder="ejemplo@gmail.com" name="email">
+            </div>
+            <div class="form-group">
+                <label for="tel">tel</label>
+                <input type="text" class="form-control" id="tel" placeholder="..." name="tel">
+            </div>
+            <div class="form-group">
+                <label for="mensaje">mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" name="mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">enviar</button>
+        </div>
+    </form>
+    {{#if message}}
+    {{message}}
+    {{/if}}
+</div>
+
+<footer>
+    <p class="text-center">Diseñado por: Lautaro Santellan</p>
+</footer>

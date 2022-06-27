@@ -1,0 +1,8 @@
+#footer{
+    background: url(../images/bg-04.png);
+    background-color: rgb(224, 144, 24);
+    background-size: 50px 50px;
+}
+h1,h2,h3,h4,h5, button {
+    font-family: 'Bitter', serif;
+}
